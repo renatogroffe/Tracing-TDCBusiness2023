@@ -24,7 +24,8 @@ IHost host = Host.CreateDefaultBuilder(args)
                 {
                     exporter.AgentHost = hostContext.Configuration["Jaeger:AgentHost"];
                     exporter.AgentPort = Convert.ToInt32(hostContext.Configuration["Jaeger:AgentPort"]);
-                });
+                })
+                .AddConsoleExporter();
         });
 
         services.AddHostedService<Worker>();
