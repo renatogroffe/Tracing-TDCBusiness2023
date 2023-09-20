@@ -63,7 +63,7 @@ services:
     ports:
       - "6100:80"
   workerkafka:
-    image: renatogroffe/workercontagem-dotnet7-opentelemetry-jaeger-kafka:2
+    image: renatogroffe/workercontagem-dotnet7-opentelemetry-jaeger-kafka:3
     depends_on:
       - zookeeper
       - kafka
